@@ -1,11 +1,10 @@
-<!doctype html>
+{% extends base.html %}
 
-<head>
-    {% load static %}
-    {% include "base/links.html" %}
-    {% include "base/less_headers/feed_less.html" %}
-    {% load i18n %}
-</head>
+{% block extra_css %}
+{% include "base/less_headers/feed_less.html" %}
+{% endblock extra_css %}
+
+{% block content %}
 
 <script id="feed-template" type="text/template">
     {% include "partials/feed/feed_base.html" %}
@@ -24,12 +23,15 @@
     {% include "partials/feed/categories.html" %}
 </script>
 
-<body>
+
     {% include "partials/utils/global_nav.html" %}
     <div id="feed">
 
     </div>
-</body>
+
+{% endblock content %}
+
+{% block extra_js %}
 
 <script type="text/javascript" src="{% static "js/feed.js" %}"></script>
 <script type="text/javascript">
@@ -51,4 +53,4 @@
         });
 </script>
 
-</html>
+{% endblock extra_js %}

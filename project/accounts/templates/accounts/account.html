@@ -1,11 +1,10 @@
-<!doctype html>
+{% extends base.html %}
 
-<head>
-    {% load static %}
-    {% include "base/links.html" %}
-    {% include "base/less_headers/account_less.html" %}
-</head>
+{% block extra_css %}
+{% include "base/less_headers/account_less.html" %}
+{% endblock extra_css %}
 
+{% block content %}
 
 <!-- Util Partials -->
 <script id="civi-template" type="text/template">
@@ -59,11 +58,14 @@
 </script>
 
 
-<body>
+
     {% include "partials/utils/global_nav.html" %}
 
     <div id="account"></div>
-</body>
+
+{% endblock content %}
+
+{% block extra_js %}
 
 <script type="text/javascript" src="{% static 'js/account.js' %}"></script>
 
@@ -82,3 +84,5 @@
     accountModel.fetch();
     accountView.render();
 </script>
+
+{% endblock extra_js %}

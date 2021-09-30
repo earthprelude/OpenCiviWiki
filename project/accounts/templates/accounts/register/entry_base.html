@@ -1,12 +1,13 @@
-{% load i18n %}
-<html>
-<head>
-    {% load static %}
-    {% include "base/links.html" %}
-    {% include "base/less_headers/login_less.html" %}
-    <title>{% block title %}CiviWiki{% endblock %}</title>
-</head>
-<body>
+{% extends base.html %}
+
+{% block page_title %}{% endblock page_title %}
+
+{% block extra_css %}
+{% include "base/less_headers/login_less.html" %}
+{% endblock extra_css %}
+
+{% block content %}
+
 {% include 'accounts/register/header.html' %}
 <div class="entry-base center-align valign-wrapper">
     <div class="entry-forms">
@@ -20,5 +21,5 @@
             </div>
     </div>
 </div>
-</body>
-</html>
+
+{% endblock content %}

@@ -1,10 +1,10 @@
-<!doctype html>
-<html>
-<head>
-    {% load static %}
-    {% include "base/links.html" %}
-    {% include "base/less_headers/setup_less.html" %}
-</head>
+{% extends base.html %}
+
+{% block extra_css %}
+{% include "base/less_headers/setup_less.html" %}
+{% endblock extra_css %}
+
+{% block content %}
 
 <script id="setup-base-template" type="text/template">
     {% include "partials/user-setup/user-setup-base.html" %}
@@ -27,9 +27,12 @@
     {% endverbatim %}
 </script>
 
-<body>
+
     <div id="user-setup"></div>
-</body>
+
+{% endblock content %}
+
+{% block extra_js %}
 
 <script type="text/javascript" src="{% static "js/user-setup.js" %}"></script>
 <script type="text/javascript">
@@ -39,4 +42,5 @@
     var setupView = new cw.UserSetupView({model: accountModel});
     accountModel.fetch();
 </script>
-</html>
+
+{% endblock extra_js %}
