@@ -1,8 +1,10 @@
-﻿{% extends base.html %}
+﻿{% extends "base.html" %}
 
 {% block page_title %}{% trans "About Us" %}{% endblock page_title %}
 
 {% block extra_css %}
+{% load static %}
+{% load i18n %}
 <link type="text/css" rel="stylesheet/less" href="{% static "less/about.less" %}"/>
 {% endblock extra_css %}
 

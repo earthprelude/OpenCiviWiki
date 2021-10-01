@@ -1,8 +1,10 @@
-{% extends base.html %}
+{% extends "base.html" %}
 
 {% block page_title %}{% endblock page_title %}
 
 {% block extra_css %}
+{% load i18n %}
+{% load static %}
 {% include "base/less_headers/login_less.html" %}
 {% endblock extra_css %}
 

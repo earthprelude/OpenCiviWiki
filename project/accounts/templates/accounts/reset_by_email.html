@@ -1,8 +1,9 @@
-{% extends base.html %}
+{% extends "base.html" %}
 
 {% block page_title %}Account Recovery{% endblock page_title %}
 
 {% block extra_css %}
+{% load static %}
 {% include "base/less_headers/login_less.html" %}
 {% endblock extra_css %}
 

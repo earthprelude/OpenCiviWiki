@@ -1,10 +1,12 @@
-{% extends base.html %}
+{% extends "base.html" %}
 
 <!-- How it Works -->
 
 {% block page_title %}{% endblock page_title %}
 
 {% block extra_css %}
+{% load static %}
+{% load i18n %}
 <link type="text/css" rel="stylesheet/less" href="{% static "less/how_it_works.less" %}"/>
 {% endblock extra_css %}
 

@@ -1,8 +1,10 @@
-{% extends base.html %}
+{% extends "base.html" %}
 
 {% block page_title %}Settings{% endblock page_title %}
 
 {% block extra_css %}
+{% load static %}
+{% load i18n %}
 <link type="text/css" rel="stylesheet/less" href="{% static "less/base.less" %}"/>
 <link type="text/css" rel="stylesheet/less" href="{% static "less/utils.less" %}"/>
 {% endblock extra_css %}
